@@ -1,0 +1,69 @@
+/* public/bookList.css */
+/* Reset default margin and padding for the list items */
+body{
+  padding: 60px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+  }
+  
+  /* Style the book list items */
+  li {
+    display: grid;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the book title */
+  li h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the book authors */
+  li p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the book description */
+  li p.description {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the book thumbnail image */
+  li img {
+    max-width: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Add a link to go back to the search page */
+  .back-link {
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  

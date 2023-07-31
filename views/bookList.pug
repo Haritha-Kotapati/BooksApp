@@ -1,0 +1,24 @@
+// views/bookList.pug
+doctype html
+html
+  head
+    title Book List
+    link(rel="stylesheet", href="/styles.css") 
+    link(rel="stylesheet", href="/bookList.css")
+  body
+    h1 Book List
+    if books.length > 0
+      ul
+        each book in books
+          li
+            h2= book.title
+            if book.authors
+              p Authors: #{book.authors.join(', ')}
+            if book.description
+              p Description: #{book.description}
+            if book.thumbnail
+              img(src=book.thumbnail, alt=book.title)
+      p
+        a(href="/",class="back-link") Back to Search Page
+    else
+      p No books found.

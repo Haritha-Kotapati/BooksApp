@@ -1,0 +1,31 @@
+// views/search.pug
+doctype html
+html
+  head
+    title My Book Search App
+    link(rel="stylesheet", href="/styles.css")
+    script(src="/script.js")  
+  body
+    header
+      h1 Welcome to My Book Search App
+      p This is a simple application to help you find your favorite books.
+    main
+      h2 Search Your Favorite Book
+      form(action="/search", method="GET")
+        input(type="text", name="query", placeholder="Enter book title or keywords")
+        button(type="submit") Search
+
+      h2 Browse by Category
+      .genre-cards-container
+        each genre in genres
+          .genre-card(onclick=`viewBooksByGenre('${genre.value}')`)
+            img(src=genre.images[Math.floor(Math.random() * genre.images.length)], alt=`${genre.text} Book`)
+            h3= genre.text
+
+      form(action="/category", method="GET" id="genreForm")
+        input(type="hidden", name="category", id="genreInput")
+      button(type="submit", style="display:none") Browse
+    
+    footer
+        hr
+        p © 2023 Haritha-Kotapati. All rights reserved.
